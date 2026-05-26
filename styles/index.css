@@ -927,7 +927,10 @@ a.room-card:hover {
 
   .prologue-heading,
   .prologue-desc {
-    white-space: nowrap;
+    /* 문구가 길어지면 한 줄로 늘어나 이미지 영역과 겹치므로,
+       1200px 이하 구간처럼 영역을 넘어가면 줄바꿈 처리 */
+    white-space: normal;
+    overflow-wrap: break-word;
   }
 
   .prologue-heading {

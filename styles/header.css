@@ -573,6 +573,16 @@
   gap: var(--gap-18);
   z-index: 2;
 }
+/* 객실명이 길어질 때: room 줄 영역은 최대 200px, 초과 시 말줄임(...) 처리
+   → 텍스트가 길어도 가로폭이 늘어나거나 잘려보이지 않음 */
+.navigation .room-parent .room a.reservation {
+  display: block;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
 .navigation .room,
 .navigation .special,
 .navigation .title {
