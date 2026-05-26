@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예약 안내</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles/theme.css">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/directions.css">
+    <link rel="stylesheet" href="./styles/quote-section.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/reservation.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap">
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="춘천 스테이문 독채풀빌라 - 예약안내" />
+  
+  <meta property="og:image" content="https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/f238eafa-c097-42cc-bd44-fdeb3d0704f7/thumbnail/1779778913980-u7w0vsnlqo.jpg" />
+  <meta property="og:url" content="https://stay-moon.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="춘천 스테이문 독채풀빌라 - 예약안내" />
+  
+  <meta name="twitter:image" content="https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/f238eafa-c097-42cc-bd44-fdeb3d0704f7/thumbnail/1779778913980-u7w0vsnlqo.jpg" />
+</head>
+<body>
+    <div class="direction reservation-page">
+      <!-- header.html include -->
+      <div id="header-container"></div>
+
+      <!-- ===================== HERO (공통 메인 롤링 이미지) ===================== -->
+      <main class="content">
+        <section class="con-2">
+          <div class="bg2">
+            <!-- CUSTOM FIELD : 예약안내 메인소개 섹션 이미지 매핑 -->
+            <div class="bg-slides" data-reservation-hero-images>
+              <!-- 동적 생성 (reservation-mapper.js) -->
+            </div>
+            <div class="bg-child">
+              <div class="address-container-parent">
+                <div class="address-container">
+                  <!-- 하드코딩, 매핑x -->
+                  <div class="direction-info">
+                    <h2 class="direction2">Reservation</h2>
+                  </div>
+                  <div class="direction-divider"></div>
+                </div>
+                <div class="arrow-container">
+                  <div class="arrow2">
+                    <img class="arrow-child2 arrow-prev" role="button" tabindex="0" aria-label="이전 슬라이드" loading="lazy" alt="" src="./public/Rectangle-37.svg" />
+                    <h3 class="h36 arrow-num-current">01</h3>
+                    <div class="arrow-child3"></div>
+                    <h3 class="h36 arrow-num-total">00</h3>
+                    <img class="arrow-child4 arrow-next" role="button" tabindex="0" aria-label="다음 슬라이드" loading="lazy" alt="" src="./public/Rectangle-37.svg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- ===================== RESERVATION 페이지 전용 컨텐츠 ===================== -->
+      <section class="reservation-section">
+        <img class="reservation-bg" alt="" src="./public/bg11@2x.png" />
+        <!-- CUSTOM FIELD : 예약안내 이용안내 섹션 이미지 매핑 -->
+        <div class="reservation-img-group" data-reservation-content-images>
+          <img class="reservation-img-01" loading="lazy" alt="" src="" />
+          <img class="reservation-img-02" loading="lazy" alt="" src="" />
+          <img class="reservation-img-03" loading="lazy" alt="" src="" />
+        </div>
+
+        <div class="content-area">
+          <!-- 하드코딩, 매핑x -->
+          <h2 class="reservation-title">Reservation</h2>
+        </div>
+
+        <div class="bg8">
+          <div class="bg-child4"></div>
+          <div class="bg-child5"></div>
+
+          <div class="tab-area">
+            <div class="tab-container">
+              <!-- 탭 메뉴 -->
+              <div class="tab-container-inner">
+                <div class="tab-list-parent">
+                  <div class="tab-list">
+                    <!-- 하드코딩, 매핑x -->
+                    <div class="tab" data-reservation-content-tabs>
+                      <b class="b11" data-tab="0">이용 안내</b>
+                      <b class="b12" data-tab="1">예약 안내</b>
+                      <b class="b12" data-tab="2">입/퇴실 안내</b>
+                      <b class="b12" data-tab="3">환불 규정</b>
+                      <b class="b12" data-tab="4">취소수수료</b>
+                    </div>
+                  </div>
+                  <div class="bg9">
+                    <div class="bg-child6"></div>
+                    <div class="bg-child7"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 탭 내용 5개 -->
+              <div class="txt17">
+
+                <!-- 1. 이용 안내 -->
+                <section class="section" data-tab-content-tabs="0">
+                  <div class="title9">
+                    <div class="title-inner"><div class="frame-child9"></div></div>
+                    <!-- 하드코딩, 매핑x -->
+                    <b class="b16">이용 안내</b>
+                  </div>
+                  <!-- 숙소관리 이용안내 매핑 -->
+                  <div class="div27" data-usage-guide></div>
+                </section>
+
+                <!-- 2. 예약 안내 -->
+                <section class="section2" data-tab-content-tabs="1">
+                  <div class="title10">
+                    <div class="title-inner"><div class="frame-child9"></div></div>
+                    <!-- 하드코딩, 매핑x -->
+                    <b class="b16">예약 안내</b>
+                  </div>
+                  <!-- 숙소관리 예약안내 매핑 -->
+                  <div class="kg-50000-container" data-reservation-guide></div>
+                </section>
+
+                <!-- 3. 입/퇴실 안내 -->
+                <div class="div29" data-tab-content-tabs="2">
+                  <div class="title11">
+                    <div class="title-inner2"><div class="frame-child9"></div></div>
+                    <!-- 하드코딩, 매핑x -->
+                    <b class="b18">입/퇴실 안내</b>
+                  </div>
+                  <!-- 숙소관리 입퇴실안내 매핑 -->
+                  <div class="div30" data-checkin-info></div>
+                </div>
+
+                <!-- 4. 환불 규정 -->
+                <div class="div29" data-tab-content-tabs="3">
+                  <div class="title9">
+                    <div class="title-inner"><div class="frame-child9"></div></div>
+                    <!-- 하드코딩, 매핑x -->
+                    <b class="b16">환불 규정</b>
+                  </div>
+                  <!-- 숙소관리 환불규정 매핑 -->
+                  <div class="div30" data-refund-notice></div>
+                </div>
+
+                <!-- 5. 취소수수료 -->
+                <section class="txt52" data-tab-content-tabs="4">
+                  <div class="title13">
+                    <div class="title-inner2"><div class="frame-child13"></div></div>
+                    <!-- 하드코딩, 매핑x -->
+                    <b class="b20">취소수수료</b>
+                  </div>
+                  <!-- 숙소관리 환불정책 취소수수료 매핑 -->
+                  <div class="cancellation-table">
+                    <div class="box" data-cancellation-table>
+                      <div class="txt1"><!-- 동적 생성 (reservation-mapper.js) --></div>
+                      <div class="cancellation-divider"></div>
+                      <div class="txt22"><!-- 동적 생성 (reservation-mapper.js) --></div>
+                    </div>
+                  </div>
+                </section>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CUSTOM FIELD : index closing 섹션 데이터 재사용 -->
+      <section class="quote-section" data-closing-section>
+        <img class="quote-bg" loading="lazy" alt="" src="" />
+        <div class="quote-content">
+          <b class="quote-title" data-closing-title></b>
+          <b class="quote-body" data-closing-description></b>
+        </div>
+      </section>
+
+      <!-- footer.html include -->
+      <div id="footer-container"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/common.js"></script>
+    <script src="./js/common/scroll-reveal.js"></script>
+    <!-- Hero 슬라이더 (directions.js의 initCon2HeroSlider) -->
+    <script src="./js/pages/directions.js"></script>
+    <!-- 탭 메뉴 -->
+    <script src="./js/pages/reservation.js"></script>
+
+    <!-- Data Mapper -->
+    <script src="./js/image-helpers.js"></script>
+    <script src="./js/data-mapper/core/base-mapper.js"></script>
+    <script src="./js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="./js/data-mapper/pages/reservation-mapper.js"></script>
+    <script src="./js/preview-handler.js"></script>
+
+    <!-- Header / Footer Loader -->
+    <script src="./js/header-footer-loader.js"></script>
+</body>
+</html>

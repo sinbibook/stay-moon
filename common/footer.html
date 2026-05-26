@@ -1,0 +1,53 @@
+<footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-nav">
+        <div class="footer-nav-tab">
+          <!-- 하드코딩, 매핑x -->
+          <h3 class="footer-nav-item">Prologue</h3>
+          <div class="footer-col">
+            <a class="footer-col-item" href="./main.html">Prologue</a>
+            <a class="footer-col-item" href="./directions.html">오시는길</a>
+            <!-- 주변 관광지 / 숙소 배치도: enabled 시 header-footer-mapper.js가 동적 추가 -->
+          </div>
+        </div>
+        <div class="footer-nav-tab">
+          <!-- 하드코딩, 매핑x -->
+          <h3 class="footer-nav-item">Rooms</h3>
+          <div class="footer-col" data-rooms-list>
+            <!-- 동적 생성 (header-footer-mapper.js) -->
+          </div>
+        </div>
+        <div class="footer-nav-tab">
+          <!-- 하드코딩, 매핑x -->
+          <h3 class="footer-nav-item">Specials</h3>
+          <div class="footer-col" data-facilities-list>
+            <!-- 동적 생성 (header-footer-mapper.js) -->
+          </div>
+        </div>
+        <div class="footer-nav-tab">
+          <!-- 하드코딩, 매핑x -->
+          <h3 class="footer-nav-item">Reservation</h3>
+          <div class="footer-col">
+            <a class="footer-col-item" href="./reservation.html">Reservation</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-info">
+        <a href="./index.html" class="footer-logo-link" aria-label="홈으로">
+          <img class="footer-logo" data-footer-logo loading="lazy" alt="" src="" />
+        </a>
+        <div class="footer-contact">
+          <div class="footer-contact-detail">
+            <b class="footer-phone" data-footer-phone></b>
+            <b class="footer-address">
+              <span data-footer-address></span><br />
+              <span data-footer-business-number></span>
+              <span data-footer-representative-name></span><br />
+              <span data-footer-ecommerce></span>
+            </b>
+          </div>
+          <b class="footer-copyright" data-footer-copyright></b>
+        </div>
+      </div>
+    </div>
+  </footer>
