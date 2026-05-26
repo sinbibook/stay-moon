@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.2.0",
-    "generatedAt": "2026-05-26T07:55:57.918069640Z",
+    "version": "1.3.0",
+    "generatedAt": "2026-05-26T08:01:21.466884466Z",
     "templateType": "fullpage_mood",
     "propertyId": "f238eafa-c097-42cc-bd44-fdeb3d0704f7",
     "homepageId": "5135afc0-ff10-4923-89fa-3d75fd3760bd"
@@ -607,13 +607,22 @@
     "templateType": "fullpage_mood",
     "images": [
       {
-        "logo": [ ]
+        "logo": [
+          {
+            "id": "025f1153-522b-4017-945e-6f449a919bc1",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5135afc0-ff10-4923-89fa-3d75fd3760bd/logo/1779782473941-aiqtgyiral.png",
+            "sortOrder": 0,
+            "description": "",
+            "isSelected": true,
+            "blockId": null
+          }
+        ]
       }
     ],
     "seo": {
       "title": "춘천 스테이문 독채풀빌라",
-      "description": "",
-      "keywords": ""
+      "description": "프라이빗한 감성과 여유로운 휴식을 담은 춘천 스테이문 독채풀빌라",
+      "keywords": "춘천펜션,춘천풀빌라,독채풀빌라,춘천감성숙소,스테이문"
     },
     "socialLinks": {
       "facebook": null,
