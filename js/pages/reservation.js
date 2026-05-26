@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 setActive(i);
                 // 클릭 시 해당 섹션으로 페이지 스크롤 — sticky 탭 영역 + 30px 여백 만큼 offset
                 var key = tab.dataset.tab;
-                var target = document.querySelector('.reservation-page [data-tab-content="' + key + '"]');
+                var target = document.querySelector('.reservation-page [data-tab-content-tabs="' + key + '"]');
                 if (!target) return;
                 var tabContainer = document.querySelector('.reservation-page .tab-container-inner');
                 var tabHeight = tabContainer ? tabContainer.getBoundingClientRect().height : 0;

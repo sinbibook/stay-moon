@@ -180,7 +180,9 @@ class HeaderFooterMapper extends BaseDataMapper {
             sortedRooms.forEach(room => {
                 const a = document.createElement('a');
                 a.className = isFooter ? 'footer-col-item' : 'reservation';
-                a.textContent = this.getRoomName(room);
+                const roomName = this.getRoomName(room);
+                a.textContent = roomName;
+                a.title = roomName; // 말줄임(...)으로 잘릴 때 전체 객실명을 hover로 확인
                 a.href = `./room.html?id=${room.id}`;
                 container.appendChild(a);
             });
