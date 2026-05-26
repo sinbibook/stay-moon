@@ -1,0 +1,79 @@
+<header class="header">
+    <a href="./index.html" class="logo-link" aria-label="홈으로">
+      <img
+        class="logo"
+        data-logo
+        loading="lazy"
+        alt=""
+        src=""
+      />
+    </a>
+    <nav class="header-nav">
+      <div class="header-reserve-btns">
+        <a href="#" class="btn-reservation btn-salmon" data-booking-engine>예약</a>
+        <a href="#" class="btn-reservation btn-gray" data-ybs-booking>YBS</a>
+      </div>
+      <button class="menu-toggle" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===================== Navigation Panel (메뉴 토글 클릭 시 표시) ===================== -->
+  <div class="navigation" hidden aria-hidden="true">
+    <main class="navigation-off">
+      <img class="navigation-off-child" loading="lazy" alt="" src="./public/Rectangle-34@2x.png" />
+      <img class="navigation-off-item" alt="" src="./public/Line-4.svg" />
+      <main class="navigation-off-inner">
+        <div class="mask-group-parent">
+          <img class="mask-group-icon" alt="" src="./public/Mask-group@2x.png" />
+
+          <div class="btn-r">
+            <button class="button-reservation" data-booking-engine>
+              <div class="button-reservation-child"></div>
+              <div class="div">예약</div>
+            </button>
+            <button class="button-ybs" data-ybs-booking>
+              <div class="button-ybs-child"></div>
+              <div class="div">YBS</div>
+            </button>
+            <svg class="close-icon" role="button" tabindex="0" aria-label="닫기" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="23.2929" y1="23.7071" x2="1.37258" y2="1.7868" stroke="currentColor" stroke-width="2"/>
+              <line x1="1.29289" y1="23.2929" x2="23.2132" y2="1.37258" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+
+          <section class="room-parent">
+            <div class="prologue">
+              <!-- 하드코딩, 매핑x -->
+              <a class="reservation" href="./main.html">Prologue</a>
+              <a class="reservation" href="./directions.html"><div class="div2">오시는길</div></a>
+              <!-- 주변 관광지 / 숙소 배치도: enabled 시 header-footer-mapper.js가 동적 추가 -->
+            </div>
+            <div class="room" data-rooms-sub>
+              <!-- 동적 생성 (header-footer-mapper.js) -->
+            </div>
+            <div class="special" data-facilities-sub>
+              <!-- 동적 생성 (header-footer-mapper.js) -->
+            </div>
+            <div class="txt">
+              <!-- 하드코딩, 매핑x -->
+              <a class="reservation" href="./reservation.html">Reservation</a>
+            </div>
+          </section>
+
+          <nav class="title">
+            <!-- 하드코딩, 매핑x -->
+            <a class="specials" href="./main.html">Prologue</a>
+            <a class="specials" href="./room.html">Rooms</a>
+            <a class="specials" href="./facility.html">Specials</a>
+            <a class="specials" href="./reservation.html">Reservation</a>
+          </nav>
+        </div>
+      </main>
+    </main>
+  </div>
+
+  <script src="./js/common/header-menu.js"></script>
