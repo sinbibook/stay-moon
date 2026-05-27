@@ -75,6 +75,15 @@
   text-underline-offset: 4px;
 }
 
+/* 객실명 가로 200px 초과 시 말줄임(...) 처리 */
+.footer-col[data-rooms-list] .footer-col-item {
+  display: block;
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .footer-info {
   flex: 0 1 400px;
   display: flex;

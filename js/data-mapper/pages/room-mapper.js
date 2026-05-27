@@ -302,7 +302,7 @@ class RoomMapper extends BaseDataMapper {
 
             const name = document.createElement('h2');
             name.className = 'room-card-name';
-            name.textContent = 'Room ' + String(index + 1).padStart(2, '0');
+            name.textContent = 'Room ' + String((index % sortedRooms.length) + 1).padStart(2, '0');
 
             info.appendChild(label);
             info.appendChild(name);
@@ -312,8 +312,28 @@ class RoomMapper extends BaseDataMapper {
             return a;
         };
 
-        sortedRooms.forEach((room, i) => track.appendChild(makeCard(room, i, false)));
-        sortedRooms.forEach((room, i) => track.appendChild(makeCard(room, i, true)));
+        // index-mapper와 동일한 블록 반복 로직:
+        // 룸 수가 적어 블록이 뷰포트보다 좁으면 루프 끝에 빈 공간이 보이고(끊김),
+        // CSS 애니메이션(room-scroll 25s)이 짧은 거리만 이동해 느리게 보임.
+        // → 한 블록이 뷰포트의 약 1.5배 이상 차도록 룸 리스트를 반복해 index.html과 속도/루프를 동일하게 맞춤.
+        const viewportW = window.innerWidth || 1200;
+        const isMobile = viewportW <= 420;
+        const cardSlot = isMobile ? 306 : 442;   // .room-card min-width + gap
+        const targetBlockW = viewportW * 1.5;
+        const cardsPerBlock = Math.max(sortedRooms.length, Math.ceil(targetBlockW / cardSlot));
+        const repeat = Math.max(1, Math.ceil(cardsPerBlock / sortedRooms.length));
+
+        const appendBlock = (isClone) => {
+            for (let r = 0; r < repeat; r++) {
+                sortedRooms.forEach((room, i) => {
+                    const idx = r * sortedRooms.length + i;
+                    track.appendChild(makeCard(room, idx, isClone));
+                });
+            }
+        };
+
+        appendBlock(false);  // 원본 블록
+        appendBlock(true);   // 복제 블록 (끊김 없는 루프)
     }
 }
 
