@@ -325,6 +325,7 @@
 .room-page .frame-main .info-label {
   margin: 0;
   width: 100px;
+  flex-shrink: 0;
   font-size: 20px;
   font-weight: 700;
   font-family: var(--font-ko-main);
@@ -450,7 +451,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.15);   /* 0.5 → 0.15 (밝기 차이 줄임) */
+  background-color: rgba(0, 0, 0, 0.3);   /* 0.15 → 0.3 (off 상태 두 배 어둡게) */
   transition: opacity 0.3s var(--ease-elegant) !important;
   pointer-events: none;
   z-index: 0;
