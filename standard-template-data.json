@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.7.0",
-    "generatedAt": "2026-05-26T08:45:57.738145298Z",
+    "version": "1.8.0",
+    "generatedAt": "2026-05-27T00:21:24.241361733Z",
     "templateType": "fullpage_mood",
     "propertyId": "f238eafa-c097-42cc-bd44-fdeb3d0704f7",
     "homepageId": "5135afc0-ff10-4923-89fa-3d75fd3760bd"
@@ -639,17 +639,9 @@
                 "title": "춘천 스테이문 독채풀빌라",
                 "images": [
                   {
-                    "id": "a0eef640-c352-4826-9de7-373353e8419b",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5135afc0-ff10-4923-89fa-3d75fd3760bd/index_hero/1779784797188-1mphwxxfss.jpg",
-                    "sortOrder": 0,
-                    "description": "",
-                    "isSelected": true,
-                    "blockId": null
-                  },
-                  {
                     "id": "25009ecc-8805-40c6-ba92-0fda76087f1c",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5135afc0-ff10-4923-89fa-3d75fd3760bd/index_hero/1779784797202-vv3n0wi2tm.jpg",
-                    "sortOrder": 1,
+                    "sortOrder": 0,
                     "description": "",
                     "isSelected": true,
                     "blockId": null
@@ -657,6 +649,14 @@
                   {
                     "id": "81283668-8658-457b-83bd-f41f6b351fa3",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5135afc0-ff10-4923-89fa-3d75fd3760bd/index_hero/1779779596274-36ezzzqm07.jpg",
+                    "sortOrder": 1,
+                    "description": "",
+                    "isSelected": true,
+                    "blockId": null
+                  },
+                  {
+                    "id": "a0eef640-c352-4826-9de7-373353e8419b",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5135afc0-ff10-4923-89fa-3d75fd3760bd/index_hero/1779784797188-1mphwxxfss.jpg",
                     "sortOrder": 2,
                     "description": "",
                     "isSelected": true,
@@ -698,14 +698,6 @@
                     "id": "8e110e02-4973-4d15-a544-f3627e7ac271",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5135afc0-ff10-4923-89fa-3d75fd3760bd/index_hero/1779779596281-hdd4yncs04.jpg",
                     "sortOrder": 7,
-                    "description": "",
-                    "isSelected": true,
-                    "blockId": null
-                  },
-                  {
-                    "id": "d52bbd7c-f734-4d22-b7a8-09de7058150c",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5135afc0-ff10-4923-89fa-3d75fd3760bd/index_hero/1779779596483-whxhrmhuf9.jpg",
-                    "sortOrder": 8,
                     "description": "",
                     "isSelected": true,
                     "blockId": null
@@ -938,9 +930,17 @@
                       "blockId": "0c83786d-8683-40f4-b628-137afe32f638"
                     },
                     {
+                      "id": "03feccfb-9121-4667-890b-cb429b35f6fe",
+                      "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5135afc0-ff10-4923-89fa-3d75fd3760bd/main_about/1779841260895-dkar1q672p.jpg",
+                      "sortOrder": 2,
+                      "description": "",
+                      "isSelected": true,
+                      "blockId": "0c83786d-8683-40f4-b628-137afe32f638"
+                    },
+                    {
                       "id": "b2747cda-a6e4-449a-b975-70e5f2e9ff89",
                       "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5135afc0-ff10-4923-89fa-3d75fd3760bd/main_about/1779781356995-j010t1797b.jpg",
-                      "sortOrder": 2,
+                      "sortOrder": 3,
                       "description": "",
                       "isSelected": true,
                       "blockId": "0c83786d-8683-40f4-b628-137afe32f638"
@@ -948,7 +948,7 @@
                     {
                       "id": "a6befbf8-eba3-4d25-8ae9-74c7fbec5c27",
                       "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5135afc0-ff10-4923-89fa-3d75fd3760bd/main_about/1779781357051-jaylbadfvm.jpg",
-                      "sortOrder": 3,
+                      "sortOrder": 4,
                       "description": "",
                       "isSelected": true,
                       "blockId": "0c83786d-8683-40f4-b628-137afe32f638"
