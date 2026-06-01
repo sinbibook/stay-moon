@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.13.0",
-    "generatedAt": "2026-06-01T08:24:28.248288763Z",
+    "version": "1.14.0",
+    "generatedAt": "2026-06-01T08:45:27.137537663Z",
     "templateType": "fullpage_mood",
     "propertyId": "f238eafa-c097-42cc-bd44-fdeb3d0704f7",
     "homepageId": "5135afc0-ff10-4923-89fa-3d75fd3760bd"
@@ -15,7 +15,7 @@
     "address": "강원특별자치도 춘천시 동내면 너부래1길 19-7",
     "latitude": 37.8426719454733,
     "longitude": 127.782543659911,
-    "contactPhone": "",
+    "contactPhone": "010-8033-7890",
     "contactEmail": "",
     "checkin": "15:00",
     "checkout": "11:00",
