@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.17.0",
-    "generatedAt": "2026-06-09T08:29:47.075968115Z",
+    "version": "1.18.0",
+    "generatedAt": "2026-06-12T01:29:03.661524651Z",
     "templateType": "fullpage_mood",
     "propertyId": "f238eafa-c097-42cc-bd44-fdeb3d0704f7",
     "homepageId": "5135afc0-ff10-4923-89fa-3d75fd3760bd"
@@ -26,7 +26,7 @@
     "city": "춘천시",
     "domain": "stay-moon.kr",
     "realtimeBookingId": "https://map.naver.com/p/entry/place/1206454446",
-    "ybsId": "",
+    "ybsId": "80495",
     "amenities": [ ],
     "nearbyAttractions": [
       "산",
