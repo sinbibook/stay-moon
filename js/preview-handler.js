@@ -56,7 +56,7 @@ class PreviewHandler {
     getDefaultColors() {
         return {
             primary: '#ecebe8',
-            secondary: '#683c3c'
+            secondary: '#F1927B'
         };
     }
 
@@ -688,6 +688,9 @@ class PreviewHandler {
             switch (section) {
                 case 'property':
                     mapper.mapPropertyName();
+                    break;
+                case 'signature':
+                    mapper.mapVideoSection();
                     break;
                 case 'gallery':
                     mapper.mapGallerySection();

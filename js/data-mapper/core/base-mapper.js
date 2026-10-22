@@ -251,6 +251,80 @@ class BaseDataMapper {
         return filteredImages.sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
     }
 
+    /**
+     * 객실 평면도 이미지 가져오기 (roomtype_floorplan 카테고리)
+     * 제목·설명 없이 이미지 한 장만 존재한다. 크롤러가 원본 객실 상세의
+     * 평면도 영역에서 이미지를 찾았을 때만 채워진다.
+     * @param {Object} room - 객실 데이터
+     * @returns {Array} 정렬된 평면도 이미지 배열
+     */
+    getRoomFloorplanImages(room) {
+        return this.getRoomImages(room, 'roomtype_floorplan');
+    }
+
+    /**
+     * 객실 평면도 대표 이미지 (첫 번째) 가져오기
+     * @param {Object} room - 객실 데이터
+     * @returns {Object|null} 평면도 이미지 객체 또는 null
+     */
+    getRoomFloorplanImage(room) {
+        const images = this.getRoomFloorplanImages(room);
+        return images.length > 0 ? images[0] : null;
+    }
+
+    /**
+     * 객실 그룹명 가져오기 (customFields.roomtypes[].groupName)
+     * 헤더 메뉴에서 여러 객실을 하나의 메뉴 항목으로 묶을 때 사용
+     * @param {Object} room - 객실 데이터
+     * @returns {string} 그룹명 (없으면 빈 문자열)
+     */
+    getRoomGroupName(room) {
+        const customFields = this.getRoomTypeCustomFields(room.id);
+        return this.sanitizeText(customFields?.groupName, '');
+    }
+
+    /**
+     * 객실 목록에 그룹이 하나라도 지정되어 있는지 확인
+     * @param {Array} rooms - 객실 데이터 배열
+     * @returns {boolean}
+     */
+    hasRoomGroups(rooms) {
+        return (rooms || []).some(room => !!this.getRoomGroupName(room));
+    }
+
+    /**
+     * 헤더/푸터 메뉴용 객실 목록 생성
+     * - groupName이 하나도 없으면: 객실별로 항목 생성 (기존 동작)
+     * - groupName이 하나라도 있으면: 같은 groupName끼리 하나의 메뉴 항목으로 묶고,
+     *   groupName이 없는 객실은 메뉴에서 제외한다 (그룹 숙소는 그룹만 노출).
+     *   그룹 항목의 링크는 해당 그룹의 첫 번째 객실로 연결된다.
+     * @param {Array} rooms - 객실 데이터 배열
+     * @returns {Array} { label, groupName, room, rooms } 형태의 메뉴 아이템 배열
+     */
+    getRoomMenuItems(rooms) {
+        const list = rooms || [];
+
+        if (!this.hasRoomGroups(list)) {
+            return list.map(room => ({ label: this.getRoomName(room), room, rooms: [room] }));
+        }
+
+        const seen = {};
+        const items = [];
+        list.forEach(room => {
+            const groupName = this.getRoomGroupName(room);
+            if (!groupName) return;
+
+            const key = `group:${groupName}`;
+            if (!seen[key]) {
+                seen[key] = { label: groupName, groupName, room, rooms: [room] };
+                items.push(seen[key]);
+            } else {
+                seen[key].rooms.push(room);
+            }
+        });
+        return items;
+    }
+
     // ============================================================================
     // 🎨 ANIMATION UTILITIES
     // ============================================================================
@@ -332,6 +406,17 @@ class BaseDataMapper {
      * 메타 태그 업데이트 (homepage.seo + 페이지별 SEO 병합)
      * @param {Object} pageSEO - 페이지별 SEO 데이터 (선택사항, 전역 SEO보다 우선 적용)
      */
+    upsertMetaByName(name, content) {
+        if (!content) return;
+        let meta = document.head.querySelector(`meta[name="${name}"]`);
+        if (!meta) {
+            meta = document.createElement('meta');
+            meta.setAttribute('name', name);
+            document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', content);
+    }
+
     updateMetaTags(pageSEO = null) {
         // homepage.seo 글로벌 SEO 데이터 적용
         const globalSEO = this.safeGet(this.data, 'homepage.seo') || {};
@@ -374,6 +459,10 @@ class BaseDataMapper {
         // OG URL은 현재 페이지 URL로 설정
         const ogUrl = this.safeSelect('meta[property="og:url"]');
         if (ogUrl) ogUrl.setAttribute('content', window.location.href);
+
+        // 네이버/구글 사이트 인증 meta 태그 주입 (값 있으면 생성/갱신)
+        this.upsertMetaByName('naver-site-verification', seo.naverSiteVerification);
+        this.upsertMetaByName('google-site-verification', seo.googleSiteVerification);
     }
 
     /**
